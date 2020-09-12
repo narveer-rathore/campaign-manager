@@ -1,0 +1,43 @@
+.list {
+    &-wrap {
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &-item {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 1fr 2fr;
+
+        &.head {
+            padding: 0;
+            background-color: #f1f1f4;
+
+            .list-col {
+                padding: 10px 15px;
+            }
+        }
+
+        &:not(:last-child) {
+            &:after {
+                content: '';
+                position: absolute;
+                background: #ECECEC;
+                left: 20px;
+                right: 20px;
+                bottom: 0;
+                height: 1px;
+            }
+        }
+    }
+
+    &-col {
+        text-transform: uppercase;
+        padding: 20px 15px;
+        margin: 0;
+    }
+
+    &-null {
+        text-align: center;
+        padding: 40px;
+        text-transform: uppercase;
+    }
+}

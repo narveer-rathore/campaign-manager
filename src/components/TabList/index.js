@@ -20,5 +20,4 @@ const TabList = ({ tabs, onChange, activeIndex } ) => {
     );
 };
 
-
 export default TabList;

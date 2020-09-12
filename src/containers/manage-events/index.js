@@ -1,9 +1,11 @@
 import React from 'react';
 import { withTranslation } from 'react-i18next';
 
+import { connect } from 'react-redux';
 import DefaultLayout from '../../layouts/default';
 
 import TabList from '../../components/TabList';
+import CampaignList from '../campaign-list'
 
 const TABS = [
   {
@@ -31,16 +33,22 @@ class Page extends React.Component {
   }
 
   render () {
-    const { t } = this.props;
+    const { t, list } = this.props;
     const { activeTabIndex } = this.state;
 
     return (
       <DefaultLayout>
         <h1>{t("Manage Campaigns")}</h1>
-        <TabList tabs={TABS} activeIndex={activeTabIndex} onChange={this.tabChanged}></TabList>
+        <TabList tabs={TABS} activeIndex={activeTabIndex} onChange={this.tabChanged} />
+        <CampaignList list={list[TABS[activeTabIndex].id]} nullMessage={t('No campaign here')} />
       </DefaultLayout>
     );
   }
 }
 
-export default withTranslation()(Page);
+const mapStateToProps = (state) => ({
+  list: state.campaigns
+})
+
+export default withTranslation()(connect(mapStateToProps)(Page));
+

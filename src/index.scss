@@ -4,6 +4,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
+  color: #556789;
 }
 
 code {
@@ -361,4 +362,12 @@ template {
 
 [hidden] {
   display: none;
+}
+
+
+
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #2B416C;
 }
