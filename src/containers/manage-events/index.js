@@ -1,15 +1,14 @@
 import React from 'react';
+import { withTranslation } from 'react-i18next';
+
 import DefaultLayout from '../../layouts/default';
 
-import i18n from '../../i18n';
-
 function App({ t }) {
-
     return (
       <DefaultLayout>
-        <h1>{i18n.t("Manage Campaigns")}</h1>
+        <h1>{t("Manage Campaigns")}</h1>
       </DefaultLayout>
     );
 }
 
-export default App;
+export default withTranslation()(App);

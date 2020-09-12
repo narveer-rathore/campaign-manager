@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import { I18nextProvider } from "react-i18next";
+import i18n from "./i18n";
+
 import './index.scss';
 import App from './containers/manage-events';
 import * as serviceWorker from './serviceWorker';
 
-import { I18nextProvider } from "react-i18next";
-import i18n from "./i18n";
 
 ReactDOM.render(
   <React.StrictMode>

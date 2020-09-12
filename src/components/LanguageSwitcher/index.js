@@ -1,26 +1,23 @@
 import React from 'react';
-import i18n from '../../i18n';
+import { withTranslation } from 'react-i18next';
 
 import './styles.scss';
 
-function LanguageSelectPicker() {
+function LanguageSelectPicker({t, i18n}) {
     const LANG_MAPS = {
-        "en": i18n.t("English"),
-        "ger": i18n.t("German")
+        "en": t("English"),
+        "ger": t("German")
     }
 
-    const code = i18n.language.split('-')[0] === 'en' ? 'ger' : 'en';
-
-    const changeLanguage = (lang) => {
-        i18n.changeLanguage(lang);
-    }
+    const otherLangCode = i18n.language.split('-')[0] === 'en' ? 'ger' : 'en';
 
     return (
-        <a title={i18n.t('Change Language')} href="/" onClick={() => changeLanguage(code)}>
-            {`${i18n.t('Switch to')} ${LANG_MAPS[code]}`}
+        <a title={t('Change Language')} href="/" onClick={() => i18n.changeLanguage(otherLangCode)}>
+            {`${t('Switch to')} ${LANG_MAPS[otherLangCode]}`}
         </a>
     );
 }
 
-export default LanguageSelectPicker;
+export default withTranslation()(LanguageSelectPicker);
+
 

@@ -1,16 +1,17 @@
 import React from 'react';
 import logo from '../../assets/images/logo.png';
+import { withTranslation } from 'react-i18next';
+
 import LanguageSelect from '../LanguageSwitcher';
 
-import i18n from '../../i18n';
 import './styles.scss';
 
-function Header() {
+function Header({ t }) {
     return (
         <header className="header">
             <div className="content">
                 <a className="logo" href="/">
-                    <img src={logo} alt={i18n.t('BlueStacks Logo')}/>
+                    <img src={logo} alt={t('BlueStacks Logo')}/>
                 </a>
                 <LanguageSelect />
             </div>
@@ -18,4 +19,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default withTranslation()(Header);
