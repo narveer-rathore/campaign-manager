@@ -1,0 +1,21 @@
+.tab {
+    &-item {
+        background: transparent;
+        border: none;
+        padding: 14px 20px;
+        cursor: pointer;
+        border-bottom: 4px solid transparent;
+        color: #556789;
+
+        transition: color .2s ease-in, border-bottom .2s ease-in-out;
+
+        &:focus {
+            outline: none;
+        }
+
+        &.active {
+            color: #83A515;
+            border-bottom: 4px solid #83A515;
+        }
+    }
+}

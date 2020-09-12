@@ -3,7 +3,7 @@ import { withTranslation } from 'react-i18next';
 
 import './styles.scss';
 
-function LanguageSelectPicker({t, i18n}) {
+const LanguageSelectPicker = ({t, i18n}) => {
     const LANG_MAPS = {
         "en": t("English"),
         "ger": t("German")

@@ -6,7 +6,7 @@ import LanguageSelect from '../LanguageSwitcher';
 
 import './styles.scss';
 
-function Header({ t }) {
+const Header = ({ t }) => {
     return (
         <header className="header">
             <div className="content">
