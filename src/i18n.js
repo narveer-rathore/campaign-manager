@@ -1,10 +1,12 @@
 import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
+import Cache from 'i18next-localstorage-cache';
+import { initReactI18next } from "react-i18next";
 
-i18n.use(LanguageDetector).init({
+i18n.use(Cache).use(LanguageDetector).use(initReactI18next).init({
     // we init with resources
     resources: {
-        en: {
+        "en-US": {
             translations: {
                 "Manage Campaigns": "Manage Campaigns",
                 "Upcoming Campaigns": "Upcoming Campaigns",
@@ -28,7 +30,7 @@ i18n.use(LanguageDetector).init({
 
         ger: {
             translations: {
-                "Manage Campaigns": "Manage Campaigns",
+                "Manage Campaigns": "Manage Campaigns - German",
                 "Upcoming Campaigns": "Upcoming Campaigns",
                 "Live Campaigns": "Live Campaigns",
                 "Past Campaigns": "Past Campaigns",
@@ -49,7 +51,7 @@ i18n.use(LanguageDetector).init({
         },
 
     },
-    fallbackLng: "en",
+    fallbackLng: "en-US",
     debug: true,
 
     // have a common namespace used around the full app
