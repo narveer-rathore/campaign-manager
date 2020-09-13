@@ -1,12 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
 import { withTranslation } from 'react-i18next';
 
 import './styles.scss';
 
-import Modal from '../../components/Modal';
 import Datepicker from '../../components/Datepicker';
 import { CAMPAIGNS_TABLE_COLUMS } from '../../constants';
 import { updateCampaign } from '../../actions/actions';

@@ -56,7 +56,7 @@ class Page extends React.Component {
         const { t, campaigns = [], loading } = this.props;
         const { activeTabIndex } = this.state;
         const filter = CAMPAIGN_TABS[activeTabIndex].id;
-        console.log(campaigns);
+
         // Check current view and filter relevant items for rendering
         // We should have used a virtualized rendering solution like agGrid
         // or react-virtualized but due to some time constraints have to go

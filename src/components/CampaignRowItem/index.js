@@ -1,14 +1,9 @@
 import React from 'react';
-
-import PropTypes from 'prop-types';
 import { withTranslation } from 'react-i18next';
 
 import CampaignMeta from '../CampaignMeta';
-
 import Action from '../Action';
-
 import defaultImage from '../../assets/images/default-game-thumbnail.png';
-
 import { localDate } from '../../utils';
 
 import './styles.scss';

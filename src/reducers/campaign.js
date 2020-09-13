@@ -1,4 +1,4 @@
-import { GET_CAMPAIGNS, UPDATE_CAMPAIGN } from '../actions/types';
+import { UPDATE_CAMPAIGN } from '../actions/types';
 
 import initialData from '../_SEED_DATA_/campaigns';
 
@@ -6,12 +6,11 @@ export default (state = initialData, action) => {
     switch (action.type) {
         case UPDATE_CAMPAIGN:
             const { id, date } = action.payload;
-            const campaign = state.findIndex(item => item.id === id)
-            console.log(state)
-            const updated = state.map(
+            const campaignIndex = state.findIndex(item => item.id === id)
+            // Update data a 'campaignIndex'
+            return state.map(
                 (content, i) => {
-                    console.log(i, campaign)
-                    if (i === campaign) {
+                    if (i === campaignIndex) {
                         return {
                             ...content,
                             scheduledOn: date
@@ -20,12 +19,7 @@ export default (state = initialData, action) => {
                         return content;
                     }
                 }
-            )
-
-            console.log(updated);
-            return updated;
-        case GET_CAMPAIGNS:
-            return action.payload;
+            );
         default:
             return state
     }
