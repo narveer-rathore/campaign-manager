@@ -1,9 +1,14 @@
 import i18n from '../i18n';
 
+export const LANG_MAPS = {
+    "en": i18n.t("English"),
+    "ger": i18n.t("German")
+}
+
 export const LANG_TO_LOCALE = {
     "ger": "de",
     "en": "en",
-    "en-US": "en-US",
+    "en-US": "en",
 };
 
 export const PRICING_OPTIONS = {
@@ -56,5 +61,6 @@ export default {
     PRICING_OPTIONS,
     CAMPAIGNS_TABLE_COLUMS,
     CAMPAIGN_TABS,
-    CAMPAIGN_ERROR_MESSAGES
+    CAMPAIGN_ERROR_MESSAGES,
+    LANG_MAPS
 }

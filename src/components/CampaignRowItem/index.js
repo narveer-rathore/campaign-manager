@@ -14,7 +14,6 @@ import { localDate } from '../../utils';
 import './styles.scss';
 
 const CampaignRowItem = ({ t, row, action }) => {
-    console.log(localDate(row.scheduledOn));
     return (
         <div className="list-item">
             <div className="list-col">

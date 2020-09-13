@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import campaignReducer from './';
+import campaignReducer from './campaign';
+import loaderReducer from './loader';
 
 export default combineReducers({
-  campaigns: campaignReducer
+  campaigns: campaignReducer,
+  isloading: loaderReducer
 });

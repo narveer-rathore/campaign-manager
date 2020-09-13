@@ -9,7 +9,7 @@ import './styles.scss';
 import Modal from '../../components/Modal';
 import Datepicker from '../../components/Datepicker';
 import { CAMPAIGNS_TABLE_COLUMS } from '../../constants';
-import { updateCampaign } from '../../actions/events';
+import { updateCampaign } from '../../actions/actions';
 import CampaignRowItem from '../../components/CampaignRowItem';
 import PricingModal from '../PricingModal';
 
@@ -112,7 +112,7 @@ CampaignList.propTypes = {
 
 };
 
-const mapDispathToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
     return {
         updateCampaign: (payload) => {
             dispatch(updateCampaign(payload))
@@ -120,4 +120,4 @@ const mapDispathToProps = (dispatch) => {
     }
 };
 
-export default withTranslation()(connect(null, mapDispathToProps)(CampaignList));
+export default withTranslation()(connect(null, mapDispatchToProps)(CampaignList));
