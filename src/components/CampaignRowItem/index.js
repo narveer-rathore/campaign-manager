@@ -3,47 +3,55 @@ import { default as moment } from 'moment';
 import PropTypes from 'prop-types';
 import { withTranslation } from 'react-i18next';
 
-import './styles.scss';
+import CampaignMeta from '../CampaignMeta';
+
+import Action from '../Action';
 
 import defaultImage from '../../assets/images/default-game-thumbnail.png';
+
+import './styles.scss';
 
 const CampaignRowItem = ({ t, row, action }) => {
     return (
         <div className="list-item">
             <div className="list-col">
-                <p className="title">{moment(row.scheduledOn).format('MMM YYYY, D')}</p>
-                <p className="subtitle">{moment(row.scheduledOn).fromNow()}</p>
+                <CampaignMeta
+                    title={moment(row.scheduledOn).format('MMM YYYY, D')}
+                    subtitle={moment(row.scheduledOn).fromNow()}
+                />
             </div>
             <div className="list-col mr-1">
-                <div className="action-meta">
-                    <div className="action-image">
-                        <img src={defaultImage}></img>
-                    </div>
-                    <div className="action-detail">
-                        <p className="title light">{row.name}</p>
-                        <p className="subtitle light">{row.region}</p>
-                    </div>
-                </div>
-            </div>
-            <div className="list-col action-group mr-full" onClick={() => action('pricing', row)}>
-                <button className="action-action">
-                    <span className="action-icon icon-price yellow"></span>
-                    <span className="action-text">{t('View Pricing')}</span>
-                </button>
+                <CampaignMeta
+                    title={row.name}
+                    subtitle={row.region}
+                    image={row.image_url || defaultImage}
+                />
             </div>
             <div className="list-col action-group">
-                <button className="action-action">
-                    <span className="action-icon icon-file green"></span>
-                    <span className="action-text">CSV</span>
-                </button>
-                <button className="action-action">
-                    <span className="action-icon icon-statistics-report red"></span>
-                    <span className="action-text">{t('Report')}</span>
-                </button>
-                <button className="action-action" onClick={() => action('schedule', row)}>
-                    <span className="action-icon icon-calendar blue"></span>
-                    <span className="action-text">{t('Schedule Again')}</span>
-                </button>
+                <Action
+                  title={t('View Pricing')}
+                  icon="icon-price"
+                  color="yellow"
+                  onClick={() => action('pricing', row)}
+                />
+            </div>
+            <div className="list-col action-group">
+              <Action
+                title="CSV"
+                icon="icon-file"
+                color="green"
+              />
+              <Action
+                title={t('Report')}
+                icon="icon-statistics-report"
+                color="red"
+              />
+              <Action
+                title={t('Schedule Again')}
+                icon="icon-calendar"
+                color="blue"
+                onClick={() => action('schedule', row)}
+              />
             </div>
         </div>
     );

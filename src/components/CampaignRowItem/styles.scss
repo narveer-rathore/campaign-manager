@@ -1,110 +1,18 @@
 @import '../../styles/variables';
 
-.title {
-  font-size: 16px;
-  color: $text-primary;
-  margin: 0 0 5px;
-
-  &.light {
-    color: $text-secondary;
-  }
-}
-
-.subtitle {
-  font-size: 14px;
-  font-style: italic;
-  color: $text-light;
-  margin: 0 0 5px;
-
-  &.light {
-    color: #9ca2b7;
-  }
-}
-
 .mr-1 {
   @media screen and (max-width: $tab-break-point) {
     order: -1;
   }
 }
 
-.mr-full {
-  @media screen and (max-width: $tab-break-point) {
-    order: 2;
-  }
-}
-
 .action {
-  &-meta {
-    display: flex;
-  }
-
   &-group {
     align-items: baseline;
 
     @media screen and (max-width: $tab-break-point) {
       padding: 0 10px;
       margin: auto;
-    }
-  }
-
-  &-detail {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-  }
-
-  &-image {
-    width: 40px;
-    height: 50px;
-    text-align: center;
-
-    img {
-      max-width: 100%;
-    }
-  }
-
-  &-action {
-    font-size: 14px;
-    color: $text-light;
-    display: inline-flex;
-    margin: 0;
-    padding: 5px;
-    align-items: center;
-    text-transform: initial;
-    cursor: pointer;
-    background: none;
-    outline: none;
-    border: none;
-
-    &:hover {
-      color: $text-primary;
-    }
-
-    &:focus {
-      outline: none;
-      background: $theme-focus;
-    }
-
-    @media screen and (max-width: $tab-break-point) {
-      padding: 6px;
-    }
-  }
-
-  &-icon {
-    font-size: 24px;
-    margin-right: 7px;
-
-    &.yellow {
-      color: #ebc668;
-    }
-    &.green {
-      color: #c1d896;
-    }
-    &.red {
-      color: #f29e7a;
-    }
-    &.blue {
-      color: #7bafe3;
     }
   }
 }

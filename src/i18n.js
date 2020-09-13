@@ -34,6 +34,7 @@ i18n.use(Cache).use(LanguageDetector).use(initReactI18next).init({
                 "Change Language": "Change Language",
                 "Switch to": "Switch to",
                 "Reschedule": "Reschedule",
+                "Thumbnail image of ": "Thumbnail image of "
             }
         },
 
@@ -65,6 +66,7 @@ i18n.use(Cache).use(LanguageDetector).use(initReactI18next).init({
                 "Change Language": "Change Language",
                 "Switch to": "Switch to",
                 "Reschedule": "Reschedule",
+                "Thumbnail image of ": "Thumbnail image of "
             }
         },
 

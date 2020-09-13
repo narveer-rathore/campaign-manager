@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import DefaultLayout from '../../layouts/default';
 import TabList from '../../components/TabList';
-import CampaignList from '../campaign-list'
+import CampaignList from '../../containers/campaign-list'
 
 import { default as moment } from 'moment';
 
@@ -39,7 +39,7 @@ class Page extends React.Component {
     const qTab = query.get('tab');
     let tab = tabId ? tabId : qTab, toSet;
 
-    let tabIndex = TABS.findIndex(item => item.id == tab);
+    let tabIndex = TABS.findIndex(item => item.id === tab);
 
     if (tabIndex < 0) {
       tabIndex = 0;
@@ -74,6 +74,8 @@ class Page extends React.Component {
           return moment(item.scheduledOn).isSame(moment(), 'day')
         case 'past':
           return moment(item.scheduledOn).isBefore(moment(), 'day');
+        default :
+          return true;
       }
     })
 

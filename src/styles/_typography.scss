@@ -3,6 +3,11 @@
 body {
     color: $text-secondary;
 }
+
+h2 {
+    color: $text-primary;
+}
+
 h1 {
     font-size: 48px;
     font-weight: bold;
@@ -11,7 +16,6 @@ h1 {
     @media screen and (max-width: $tab-break-point) {
         font-size: 36px;
     }
-
 }
 
 .primary-action {

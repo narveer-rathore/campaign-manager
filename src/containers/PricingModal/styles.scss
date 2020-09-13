@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.data {
+    &-title {
+        margin: 30px 0 20px;
+    }
+
+    &-list {
+        margin: 20px 0 50px;
+        padding: 0;
+        list-style: none;
+    }
+
+    &-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    &-label, &-value {
+        margin: 0;
+    }
+
+    &-label {
+        color: $text-light;
+        padding-right: 10px;
+    }
+
+    &-value {
+        color: $text-secondary;
+        font-weight: bold;
+    }
+}

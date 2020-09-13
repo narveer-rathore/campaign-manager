@@ -9,7 +9,7 @@ import i18n from "./i18n";
 import { PersistGate } from 'redux-persist/integration/react'
 
 import './styles/index.scss';
-import App from './containers/manage-events';
+import App from './pages/manage-events';
 
 import Loader from './components/Loader';
 

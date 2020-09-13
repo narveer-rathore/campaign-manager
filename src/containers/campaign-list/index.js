@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FixedSizeList as List } from 'react-window';
 
 import { withTranslation } from 'react-i18next';
 
@@ -12,6 +11,7 @@ import './styles.scss';
 
 import { updateCampaign } from '../../actions/events';
 import CampaignRowItem from '../../components/CampaignRowItem';
+import PricingModal from '../PricingModal';
 
 const CAMPAIGNS_TABLE_COLUMS = [
     {
@@ -81,6 +81,9 @@ class CampaignList extends React.Component {
                     isDatePickerOpen: true
                 })
                 break;
+
+            default:
+                return;
         }
     }
 
@@ -106,12 +109,11 @@ class CampaignList extends React.Component {
                     })}
                 </div>}
                 { !list.length && <h2 className="list-null">{nullMessage}</h2> }
-                <Modal
+                <PricingModal
+                    data={data}
                     isOpen={isPricingModalOpen}
                     close={this.hidePricingModal}
-                    >
-                    {data.name}
-                </Modal>
+                />
                 <Datepicker
                     date={data.scheduledOn}
                     isOpen={isDatePickerOpen}

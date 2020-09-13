@@ -1,14 +1,19 @@
 [
     {
         "id": 0,
-        "name": "Test Whatsapp",
+        "name": " Player Unknowns Battleground  Player Unknowns Battleground",
         "region": "US",
         "createdOn": 1559807714999,
         "scheduledOn": 1599978049221,
         "price": "Price info of Test Whatsapp",
         "csv": "Some CSV link for Whatsapp",
         "report": "Some report link for Whatsapp",
-        "image_url": "Some image url of the campaign"
+        "image_url": "",
+        "pricing": {
+            "month_1": "100.00",
+            "month_6": "500.00",
+            "month_12": "900.00"
+        }
     },
     {
         "id": 1,
@@ -19,7 +24,12 @@
         "price": "Price info of Test Whatsapp",
         "csv": "Some CSV link for Whatsapp",
         "report": "Some report link for Whatsapp",
-        "image_url": "Some image url of the campaign"
+        "image_url": "",
+        "pricing": {
+            "month_1": "100.00",
+            "month_6": "500.00",
+            "month_12": "900.00"
+        }
     },
     {
         "id": 2,
@@ -30,6 +40,11 @@
         "price": "Price info of Test Whatsapp",
         "csv": "Some CSV link for Whatsapp",
         "report": "Some report link for Whatsapp",
-        "image_url": "Some image url of the campaign"
+        "image_url": "",
+        "pricing": {
+            "month_1": "100.00",
+            "month_6": "500.00",
+            "month_12": "900.00"
+        }
     }
 ]
