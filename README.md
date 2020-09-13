@@ -1,3 +1,15 @@
+## Campaign Manager
+1. react
+2. redux
+3. redux-persist
+4. i18n localization (german)
+5. moment
+6. react-datepicker
+7. react-modal
+8. prop-types
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
