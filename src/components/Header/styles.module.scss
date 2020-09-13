@@ -1,25 +1,19 @@
-header {
-    background-color: #1F2640;
-    padding: 10px 0;
-}
-
 .header {
+    background-color: #1f2640;
+    padding: 10px 0;
+
     .content {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
 }
-.content {
-    max-width: 1080px;
-    margin: auto;
-    padding: 0 15px;
-}
+
 
 .logo {
     max-width: 130px;
-}
 
-img {
-    max-width: 100%;
+    img {
+        max-width: 100%;
+    }
 }

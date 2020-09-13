@@ -1,7 +1,7 @@
 import React from 'react';
 import { withTranslation } from 'react-i18next';
 
-import './styles.scss';
+import styles from './styles.module.scss';
 
 const LanguageSelectPicker = ({t, i18n}) => {
     const LANG_MAPS = {
@@ -12,7 +12,7 @@ const LanguageSelectPicker = ({t, i18n}) => {
     const otherLangCode = i18n.language.split('-')[0] === 'en' ? 'ger' : 'en';
 
     return (
-        <a title={t('Change Language')} href="/" onClick={() => i18n.changeLanguage(otherLangCode)}>
+        <a className={styles.link} title={t('Change Language')} href="/" onClick={() => i18n.changeLanguage(otherLangCode)}>
             {`${t('Switch to')} ${LANG_MAPS[otherLangCode]}`}
         </a>
     );

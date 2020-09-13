@@ -1,16 +1,18 @@
 import React from 'react';
-import logo from '../../assets/images/logo.png';
 import { withTranslation } from 'react-i18next';
+import { default as classnames } from 'classnames';
 
 import LanguageSelect from '../LanguageSwitcher';
+import styles from './styles.module.scss';
 
-import './styles.scss';
+import logo from '../../assets/images/logo.png';
 
 const Header = ({ t }) => {
+
     return (
-        <header className="header">
-            <div className="content">
-                <a className="logo" href="/">
+        <header className={styles.header}>
+            <div className={classnames("content", styles.content)}>
+                <a className={styles.logo} href="/">
                     <img src={logo} alt={t('BlueStacks Logo')}/>
                 </a>
                 <LanguageSelect />

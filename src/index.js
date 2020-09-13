@@ -8,7 +8,7 @@ import i18n from "./i18n";
 
 import { PersistGate } from 'redux-persist/integration/react'
 
-import './index.scss';
+import './styles/index.scss';
 import App from './containers/manage-events';
 
 import Loader from './components/Loader';
@@ -25,7 +25,7 @@ ReactDOM.render(
       <Provider store={store}>
         <PersistGate loading={<Loader />} persistor={persistor}>
           <App />
-        </PersistGate>``
+        </PersistGate>
       </Provider>
     </I18nextProvider>
   </React.StrictMode>,

@@ -1,0 +1,21 @@
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #2b416c;
+}
+
+.primary-action {
+    font-size: 16px;
+    font-weight: bold;
+    color: #181b34;
+    padding: 10px 15px;
+    border: 2px solid;
+    background: transparent;
+    text-transform: capitalize;
+    cursor: pointer;
+
+    &:hover, &:focus {
+        background-color: #181b34;
+        color: white;
+    }
+}
