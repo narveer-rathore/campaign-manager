@@ -12,7 +12,7 @@ const Header = ({ t }) => {
     return (
         <header className={styles.header}>
             <div className={classnames("content", styles.content)}>
-                <a className={styles.logo} href="/">
+                <a className={styles.logo} href={'/campaigns/?tab=upcoming'}>
                     <img src={logo} alt={t('BlueStacks Logo')}/>
                 </a>
                 <LanguageSelect />

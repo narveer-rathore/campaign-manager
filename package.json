@@ -2,7 +2,7 @@
   "name": "campaign-manager",
   "version": "0.1.0",
   "private": true,
-  "homepage": "./",
+  "homepage": "/campaigns/",
   "dependencies": {
     "@babel/core": "7.9.0",
     "@svgr/webpack": "4.3.3",
