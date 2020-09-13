@@ -1,24 +1,34 @@
+@import '../../styles/variables';
+
 .tab {
     &-item {
+        font-size: 18px;
         background: transparent;
         border: none;
         padding: 14px 20px;
         cursor: pointer;
         border-bottom: 4px solid transparent;
-
         transition: color .1s ease-in, border-bottom .2s ease-in-out;
+        color: $text-secondary;
+
+        @media screen and (max-width: $tab-break-point) {
+            padding: 10px;
+            width: 110px;
+            font-size: 16px;
+        }
 
         &:hover {
-            color: #83a515;
+            color: $tab-active;
         }
 
         &:focus {
             outline: none;
+            background: $theme-focus;
         }
 
         &.active {
-            color: #83A515;
-            border-bottom: 4px solid #83A515;
+            color: $tab-active;
+            border-bottom: 4px solid $tab-active;
         }
     }
 }

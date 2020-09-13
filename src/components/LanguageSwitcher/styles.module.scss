@@ -1,5 +1,7 @@
+@import '../../styles/variables';
+
 .link {
-    color: white;
+    color: $white;
     cursor: pointer;
 
     &:hover {

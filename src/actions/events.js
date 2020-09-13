@@ -1,6 +1,6 @@
-export const updateEvent = () => dispatch => {
+export const updateCampaign = (payload) => dispatch => {
     dispatch({
         type: 'UPDATE_CAMPAIGN',
-        payload: 'result_of_simple_action'
+        payload
     })
 }

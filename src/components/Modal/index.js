@@ -28,7 +28,7 @@ const AppModal = ({ children, isOpen, close, label }) => {
         >
             {children}
             <footer className={styles.footer}>
-                <button onClick={close} className="primary-action">close</button>
+                <button onClick={close} className="primary-action">Close</button>
             </footer>
         </Modal>
     );

@@ -1,13 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FixedSizeList as List } from 'react-window';
-import { default as moment } from 'moment';
 
+import { withTranslation } from 'react-i18next';
+
+import { connect } from 'react-redux';
 import Modal from '../../components/Modal';
+import Datepicker from '../../components/Datepicker';
 
 import './styles.scss';
 
-import defaultImage from '../../assets/images/default-game-thumbnail.png';
+import { updateCampaign } from '../../actions/events';
+import CampaignRowItem from '../../components/CampaignRowItem';
 
 const CAMPAIGNS_TABLE_COLUMS = [
     {
@@ -27,22 +31,15 @@ const CAMPAIGNS_TABLE_COLUMS = [
         title: "Action"
     }
 ]
-
 class CampaignList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             data: {},
-            isPricingModalOpen: false
+            isPricingModalOpen: false,
+            isDatePickerOpen: false
         }
-    }
 
-    showPricing = (row) => {
-        console.log("setting state")
-        this.setState({
-            data: row,
-            isPricingModalOpen: true
-        })
     }
 
     hidePricingModal = () => {
@@ -52,9 +49,44 @@ class CampaignList extends React.Component {
         })
     }
 
+    hideDateModal = () => {
+        this.setState({
+            data: {},
+            isDatePickerOpen: false
+        })
+    }
+
+    dateChanged = (date) => {
+        const { data } = this.state;
+        if (date) {
+            this.props.updateCampaign({
+                id: data.id,
+                date: date.getTime()
+            });
+        }
+        this.hideDateModal();
+    }
+
+    rowClicked = (type, row) => {
+        switch(type) {
+            case 'pricing':
+                this.setState({
+                    data: row,
+                    isPricingModalOpen: true
+                })
+                break;
+            case 'schedule':
+                this.setState({
+                    data: row,
+                    isDatePickerOpen: true
+                })
+                break;
+        }
+    }
+
     render() {
-        const { isPricingModalOpen, data } = this.state;
-        const { list, nullMessage } = this.props;
+        const { isDatePickerOpen, isPricingModalOpen, data } = this.state;
+        const { t, list, nullMessage } = this.props;
 
         return (
             <div className = "list-wrap" >
@@ -63,57 +95,29 @@ class CampaignList extends React.Component {
                         return <p className="list-col" key={item.id}>{item.title}</p>
                     })}
                 </div>
-                { list.length > 0 && <List
-                    height={Math.max(500, window.innerHeight - 400)}
-                    itemCount={list.length}
-                    itemSize={70}
-                    width={Math.min(1080, window.innerWidth - 70)}
-                    >
-                    {({ index, style }) => {
-                        const row = list[index];
-                        return <div className="list-item" style={style}>
-                            <div className="list-col">
-                                <p className="title">{moment(row.createdOn).format('MMM YYYY, D')}</p>
-                                <p className="subtitle">{moment(row.createdOn).fromNow()}</p>
-                            </div>
-                            <div className="list-col">
-                                <div className="campaign-meta">
-                                    <div className="campaign-image">
-                                        <img src={defaultImage}></img>
-                                    </div>
-                                    <div className="campaign-text">
-                                        <p className="title light">{row.name}</p>
-                                        <p className="subtitle light">{row.region}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="list-col campaign-group" onClick={() => this.showPricing(row)}>
-                                <button className="campaign-action">
-                                    <span className="campaign-icon icon-price yellow"></span>
-                                    View Pricing
-                                </button>
-                            </div>
-                            <div className="list-col campaign-group">
-                                <button className="campaign-action">
-                                    <span className="campaign-icon icon-file green"></span>
-                                    CSV
-                                </button>
-                                <button className="campaign-action">
-                                    <span className="campaign-icon icon-statistics-report red"></span>
-                                    Report
-                                </button>
-                                <button className="campaign-action">
-                                    <span className="campaign-icon icon-calendar blue"></span>
-                                    Schedule Again
-                                </button>
-                            </div>
-                        </div>
-                    }}
-                </List>}
+                { list.length > 0 &&
+                <div>
+                    {list.map(row => {
+                        return <CampaignRowItem
+                            row={row}
+                            action={this.rowClicked}
+                            key={row.id}
+                        />
+                    })}
+                </div>}
                 { !list.length && <h2 className="list-null">{nullMessage}</h2> }
-                <Modal isOpen={isPricingModalOpen} close={this.hidePricingModal}>
+                <Modal
+                    isOpen={isPricingModalOpen}
+                    close={this.hidePricingModal}
+                    >
                     {data.name}
                 </Modal>
+                <Datepicker
+                    date={data.scheduledOn}
+                    isOpen={isDatePickerOpen}
+                    onChange={this.dateChanged}
+                    title={t('Reschedule')}
+                />
             </div >
         );
     }
@@ -124,4 +128,12 @@ CampaignList.propTypes = {
 
 };
 
-export default CampaignList;
+const mapDispathToProps = (dispatch) => {
+    return {
+        updateCampaign: (payload) => {
+            dispatch(updateCampaign(payload))
+        }
+    }
+};
+
+export default withTranslation()(connect(null, mapDispathToProps)(CampaignList));

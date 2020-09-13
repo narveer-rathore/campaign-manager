@@ -24,7 +24,16 @@ i18n.use(Cache).use(LanguageDetector).use(initReactI18next).init({
                 "Week": "Week",
                 "Months": "Months",
                 "Month": "Month",
-                "Year": "Year"
+                "Year": "Year",
+                "No upcoming campaigns": "No upcoming campaigns",
+                "No live campaigns": "No live campaigns",
+                "No past campaigns": "No past campaigns",
+                "BlueStacks Logo": "BlueStacks Logo",
+                "English": "English",
+                "German": "German",
+                "Change Language": "Change Language",
+                "Switch to": "Switch to",
+                "Reschedule": "Reschedule",
             }
         },
 
@@ -46,7 +55,16 @@ i18n.use(Cache).use(LanguageDetector).use(initReactI18next).init({
                 "Week": "Week",
                 "Months": "Months",
                 "Month": "Month",
-                "Year": "Year"
+                "Year": "Year",
+                "No upcoming campaigns": "No upcoming campaigns",
+                "No live campaigns": "No live campaigns",
+                "No past campaigns": "No past campaigns",
+                "BlueStacks Logo": "BlueStacks Logo",
+                "English": "English",
+                "German": "German",
+                "Change Language": "Change Language",
+                "Switch to": "Switch to",
+                "Reschedule": "Reschedule",
             }
         },
 

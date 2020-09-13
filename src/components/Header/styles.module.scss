@@ -1,5 +1,7 @@
+@import '../../styles/variables';
+
 .header {
-    background-color: #1f2640;
+    background-color: $header-background;
     padding: 10px 0;
 
     .content {

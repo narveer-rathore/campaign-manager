@@ -1,0 +1,21 @@
+@import '../../styles/variables';
+
+.datepicker-wrap {
+    margin: auto;
+
+    .react-datepicker__header {
+        background-color: transparent;
+    }
+
+    .react-datepicker__day--selected, .react-datepicker__day--keyboard-selected  {
+        background-color: $theme-primary;
+    }
+
+    .react-datepicker__day--keyboard-selected {
+        opacity: .8;
+    }
+}
+
+.text-center {
+    text-align: center;
+}

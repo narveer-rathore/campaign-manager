@@ -1,11 +1,23 @@
+@import '../../styles/variables';
+
 .list {
     &-wrap {
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 50px;
+        min-height: calc(100vh - 340px);
     }
 
     &-item {
         display: grid;
         grid-template-columns: 1fr 1.5fr 1fr 2fr;
+        position: relative;
+
+        @media screen and (max-width: $tab-break-point) {
+            // grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column;
+            padding: 10px 0;
+        }
 
         &:hover {
             background-color: #f1f1f45e;
@@ -15,17 +27,22 @@
             &:after {
                 content: '';
                 position: absolute;
-                background: #ECECEC;
+                background: #ececec;
                 left: 15px;
                 right: 20px;
                 bottom: 0;
                 height: 1px;
             }
+
         }
 
         &.head {
             padding: 0;
             background-color: #f1f1f4;
+
+            @media screen and (max-width: $tab-break-point) {
+                display: none;
+            }
 
             .list-col {
                 padding: 10px 15px;
@@ -38,92 +55,17 @@
         text-transform: uppercase;
         padding: 20px 15px;
         margin: 0;
+
+        @media screen and (max-width: $tab-break-point) {
+            padding: 10px 15px;
+        }
+
     }
 
     &-null {
         text-align: center;
-        padding: 40px;
-        text-transform: uppercase;
+        padding: 40px 20px;
+        font-size: 20px;
+        font-weight: 100;
     }
-}
-
-.title {
-    font-size: 16px;
-    color: #2B416C;
-    margin: 0 0 5px;
-
-    &.light {
-        color: #556789;
-    }
-}
-
-.subtitle {
-    font-size: 14px;
-    font-style: italic;
-    color: #7788A3;
-    margin: 0 0 5px;
-
-    &.light {
-        color: #9CA2B7;
-    }
-}
-
-.campaign {
-    &-meta {
-        display: flex;
-    }
-
-    &-group {
-        display: flex;
-        align-items: baseline;;
-    }
-
-    &-text {
-        display: flex;
-        flex-direction: column;
-        margin-left: 10px;
-    }
-
-    &-image {
-        width: 40px;
-        height: 50px;
-        text-align: center;
-
-        img {
-            max-width: 100%;
-        }
-    }
-
-    &-action {
-        font-size: 14px;
-        color: #7788A3;
-        display: inline-flex;
-        margin: 0;
-        padding: 0 5px;
-        align-items: center;
-        text-transform: initial;
-        cursor: pointer;
-        background: none;
-        outline: none;
-        border: none;
-    }
-
-    &-icon {
-        font-size: 24px;
-        margin-right: 7px;
-
-        &.yellow {
-            color: #EBC668;
-        }
-        &.green {
-            color: #C1D896;
-        }
-        &.red {
-            color: #F29E7A;
-        }
-        &.blue {
-            color: #7BAFE3;
-        }
-    }
-
 }

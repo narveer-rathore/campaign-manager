@@ -1,117 +1,35 @@
-{
-    "upcoming": [
-        {
-            "name": "Test Whatsapp",
-            "region": "US",
-            "createdOn": 1559807714999,
-            "price": "Price info of Test Whatsapp",
-            "csv": "Some CSV link for Whatsapp",
-            "report": "Some report link for Whatsapp",
-            "image_url": "Some image url of the campaign"
-        },
-        {
-            "name": "Super Jewels Quest",
-            "region": "CA, FR",
-            "createdOn": 1559806715124,
-            "price": "Price info of Super Jewels Quest",
-            "csv": "Some CSV link for Super Jewels Quest",
-            "report": "Some report link for Super Jewels Ques",
-            "image_url": "Some image url of the campaign"
-        },
-        {
-            "name": "Mole Slayer",
-            "region": "FR",
-            "createdOn": 1559806711124,
-            "price": "Price info of Mole Slayer",
-            "csv": "Some CSV link for Mole Slayer",
-            "report": "Some report link for Mole Slayer",
-            "image_url": "Some image url of the campaign"
-        },
-        {
-            "name": "Mancala Mix",
-            "region": "JP",
-            "createdOn": 1559806680124,
-            "price": "Price info of Mancala Mix",
-            "csv": "Some CSV link for Mancala Mix",
-            "report": "Some report link for Mancala Mix",
-            "image_url": "Some image url of the campaign"
-        }
-    ],
-    "live": [
-        {
-            "name": "Live Test Whatsapp",
-            "region": "US",
-            "createdOn": 1559807714999,
-            "price": "Price info of Test Whatsapp",
-            "csv": "Some CSV link for Whatsapp",
-            "report": "Some report link for Whatsapp",
-            "image_url": "Some image url of the campaign"
-        },
-        {
-            "name": "Live Super Jewels Quest",
-            "region": "CA, FR",
-            "createdOn": 1559806715124,
-            "price": "Price info of Super Jewels Quest",
-            "csv": "Some CSV link for Super Jewels Quest",
-            "report": "Some report link for Super Jewels Ques",
-            "image_url": "Some image url of the campaign"
-        },
-        {
-            "name": "Live Mole Slayer",
-            "region": "FR",
-            "createdOn": 1559806711124,
-            "price": "Price info of Mole Slayer",
-            "csv": "Some CSV link for Mole Slayer",
-            "report": "Some report link for Mole Slayer",
-            "image_url": "Some image url of the campaign"
-        },
-        {
-            "name": "Live Mancala Mix",
-            "region": "JP",
-            "createdOn": 1559806680124,
-            "price": "Price info of Mancala Mix",
-            "csv": "Some CSV link for Mancala Mix",
-            "report": "Some report link for Mancala Mix",
-            "image_url": "Some image url of the campaign"
-        }
-    ],
-    "past": [
-        {
-            "name": "Past Test Whatsapp",
-            "region": "US",
-            "createdOn": 1577836800,
-            "price": "Price info of Test Whatsapp",
-            "csv": "Some CSV link for Whatsapp",
-            "report": "Some report link for Whatsapp",
-            "image_url": "Some image url of the campaign"
-        },
-        {
-            "name": "Past Super Jewels Quest",
-            "region": "CA, FR",
-            "createdOn": 1573334061,
-            "price": "Price info of Super Jewels Quest",
-            "csv": "Some CSV link for Super Jewels Quest",
-            "report": "Some report link for Super Jewels Ques",
-            "image_url": "Some image url of the campaign"
-        },
-        {
-            "name": "Past Mole Slayer",
-            "region": "FR",
-            "createdOn": 1573414061,
-            "price": "Price info of Mole Slayer",
-            "csv": "Some CSV link for Mole Slayer",
-            "report": "Some report link for Mole Slayer",
-            "image_url": "Some image url of the campaign"
-        },
-        {
-            "name": "Past Mancala Mix",
-            "region": "JP",
-            "createdOn": 1573431061,
-            "price": "Price info of Mancala Mix",
-            "csv": "Some CSV link for Mancala Mix",
-            "report": "Some report link for Mancala Mix",
-            "image_url": "Some image url of the campaign"
-        }
-    ]
-}
-
+[
+    {
+        "id": 0,
+        "name": "Test Whatsapp",
+        "region": "US",
+        "createdOn": 1559807714999,
+        "scheduledOn": 1599978049221,
+        "price": "Price info of Test Whatsapp",
+        "csv": "Some CSV link for Whatsapp",
+        "report": "Some report link for Whatsapp",
+        "image_url": "Some image url of the campaign"
+    },
+    {
+        "id": 1,
+        "name": "Test Whatsapp",
+        "region": "US",
+        "createdOn": 1559807714999,
+        "scheduledOn": 1599978049221,
+        "price": "Price info of Test Whatsapp",
+        "csv": "Some CSV link for Whatsapp",
+        "report": "Some report link for Whatsapp",
+        "image_url": "Some image url of the campaign"
+    },
+    {
+        "id": 2,
+        "name": "Test Whatsapp",
+        "region": "US",
+        "createdOn": 1559807714999,
+        "scheduledOn": 1599978049221,
+        "price": "Price info of Test Whatsapp",
+        "csv": "Some CSV link for Whatsapp",
+        "report": "Some report link for Whatsapp",
+        "image_url": "Some image url of the campaign"
+    }
+]

@@ -1,13 +1,23 @@
+@import './variables';
+
+body {
+    color: $text-secondary;
+}
 h1 {
     font-size: 48px;
     font-weight: bold;
-    color: #2b416c;
+    color: $text-primary;
+
+    @media screen and (max-width: $tab-break-point) {
+        font-size: 36px;
+    }
+
 }
 
 .primary-action {
     font-size: 16px;
     font-weight: bold;
-    color: #181b34;
+    color: $theme-primary;
     padding: 10px 15px;
     border: 2px solid;
     background: transparent;
@@ -15,7 +25,13 @@ h1 {
     cursor: pointer;
 
     &:hover, &:focus {
-        background-color: #181b34;
-        color: white;
+        background-color: $theme-primary;
+        color: $white;
+    }
+}
+
+a {
+    &:focus {
+        outline: 1px solid $white;
     }
 }
