@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 
+import { withTranslation } from 'react-i18next';
+
 import styles from './styles.module.scss';
 
 const customStyles = {
@@ -18,7 +20,7 @@ const customStyles = {
 
 Modal.setAppElement('#root')
 
-const AppModal = ({ children, isOpen, close, label }) => {
+const AppModal = ({ children, isOpen, close, label, t }) => {
     return (
         <Modal
             isOpen={isOpen}
@@ -28,7 +30,7 @@ const AppModal = ({ children, isOpen, close, label }) => {
         >
             {children}
             <footer className={styles.footer}>
-                <button onClick={close} className="primary-action">Close</button>
+                <button onClick={close} className="primary-action">{t('Close')}</button>
             </footer>
         </Modal>
     );
@@ -38,4 +40,4 @@ AppModal.propTypes = {
 
 };
 
-export default AppModal;
+export default withTranslation()(AppModal);

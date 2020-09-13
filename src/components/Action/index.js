@@ -7,7 +7,7 @@ import './index.scss';
 
 const Action = ({ title, icon, color, onClick }) => {
     return (
-        <button className="action-wrap" onClick={onClick}>
+        <button className="action-wrap" onClick={onClick} title={title}>
             <span className={classnames({
                 "action-icon": true,
                 [icon]: !!icon,

@@ -1,15 +1,14 @@
 [
     {
         "id": 0,
-        "name": " Player Unknowns Battleground  Player Unknowns Battleground",
+        "name": "Player Unknowns Battleground",
         "region": "US",
         "createdOn": 1559807714999,
         "scheduledOn": 1599978049221,
-        "price": "Price info of Test Whatsapp",
-        "csv": "Some CSV link for Whatsapp",
-        "report": "Some report link for Whatsapp",
-        "image_url": "",
-        "pricing": {
+        "csv": "https://google.com",
+        "report": "https://google.com",
+        "image_url": "https://miro.medium.com/max/900/1*JaPbip-d6aCr-vZeCO2Amg.jpeg",
+        "price": {
             "month_1": "100.00",
             "month_6": "500.00",
             "month_12": "900.00"
@@ -18,14 +17,13 @@
     {
         "id": 1,
         "name": "Test Whatsapp",
-        "region": "US",
+        "region": "CA, FR",
         "createdOn": 1559807714999,
         "scheduledOn": 1599978049221,
-        "price": "Price info of Test Whatsapp",
-        "csv": "Some CSV link for Whatsapp",
-        "report": "Some report link for Whatsapp",
+        "csv": "https://google.com",
+        "report": "https://google.com",
         "image_url": "",
-        "pricing": {
+        "price": {
             "month_1": "100.00",
             "month_6": "500.00",
             "month_12": "900.00"
@@ -33,15 +31,14 @@
     },
     {
         "id": 2,
-        "name": "Test Whatsapp",
-        "region": "US",
+        "name": "Mole Slayer",
+        "region": "FR",
         "createdOn": 1559807714999,
         "scheduledOn": 1599978049221,
-        "price": "Price info of Test Whatsapp",
-        "csv": "Some CSV link for Whatsapp",
-        "report": "Some report link for Whatsapp",
+        "csv": "https://google.com",
+        "report": "https://google.com",
         "image_url": "",
-        "pricing": {
+        "price": {
             "month_1": "100.00",
             "month_6": "500.00",
             "month_12": "900.00"

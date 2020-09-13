@@ -1,36 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { withTranslation } from 'react-i18next';
-
 import { connect } from 'react-redux';
-import Modal from '../../components/Modal';
-import Datepicker from '../../components/Datepicker';
+import { withTranslation } from 'react-i18next';
 
 import './styles.scss';
 
+import Modal from '../../components/Modal';
+import Datepicker from '../../components/Datepicker';
+import { CAMPAIGNS_TABLE_COLUMS } from '../../constants';
 import { updateCampaign } from '../../actions/events';
 import CampaignRowItem from '../../components/CampaignRowItem';
 import PricingModal from '../PricingModal';
 
-const CAMPAIGNS_TABLE_COLUMS = [
-    {
-        id: "date",
-        title: "Date",
-    },
-    {
-        id: "campaign",
-        title: "Campaign"
-    },
-    {
-        id: "view",
-        title: "View"
-    },
-    {
-        id: "action",
-        title: "Action"
-    }
-]
 class CampaignList extends React.Component {
     constructor(props) {
         super(props);
