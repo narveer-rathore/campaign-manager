@@ -38,6 +38,7 @@ class CampaignList extends React.Component {
         })
     }
 
+    // On picking a date
     dateChanged = (date) => {
         const { data } = this.state;
         if (date) {
@@ -49,6 +50,9 @@ class CampaignList extends React.Component {
         this.hideDateModal();
     }
 
+
+    // Check type of action triggered on a row and
+    // perform it
     rowClicked = (type, row) => {
         switch(type) {
             case 'pricing':

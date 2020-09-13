@@ -13,7 +13,11 @@ const TabList = ({ tabs, onChange, activeIndex } ) => {
                     title={item.title}
                     isActive={index === activeIndex}
                     index={index}
-                    onClick={() => onChange(index)}
+                    onClick={() => {
+                        // Do not change trigger if already on same tab
+                        if (index !== activeIndex) {
+                            onChange(index)
+                    }}}
                 />
             })}
         </div>
