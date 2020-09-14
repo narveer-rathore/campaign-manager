@@ -6,7 +6,7 @@ import { LANG_TO_LOCALE } from '../constants';
 
 // Return localized moment object
 export const localDate = (date = new moment()) => {
-    const lang = i18n.language.split()[0];
+    const lang = i18n.language.split("-")[0];
     return moment(date).locale(LANG_TO_LOCALE[lang]);
 };
 
