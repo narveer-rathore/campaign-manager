@@ -12,7 +12,8 @@
 
     @media screen and (max-width: $tab-break-point) {
       padding: 0 10px;
-      margin: auto;
+      display: flex;
+      justify-content: center;
     }
   }
 }

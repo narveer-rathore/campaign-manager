@@ -5,6 +5,10 @@
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
         margin-bottom: 50px;
         min-height: calc(100vh - 340px);
+
+        @media screen and (max-width: $tab-break-point) {
+            box-shadow: none;
+        }
     }
 
     &-item {
@@ -13,10 +17,13 @@
         position: relative;
 
         @media screen and (max-width: $tab-break-point) {
-            // grid-template-columns: 1fr;
             display: flex;
             flex-direction: column;
             padding: 10px 0;
+            margin-bottom: 20px;
+            background: $white;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            padding-bottom: 0;
         }
 
         &:hover {
@@ -32,6 +39,10 @@
                 right: 20px;
                 bottom: 0;
                 height: 1px;
+
+                @media screen and (max-width: $tab-break-point) {
+                    display: none;
+                }
             }
 
         }
@@ -60,6 +71,33 @@
             padding: 10px 15px;
         }
 
+        &.date {
+            @media screen and (max-width: $tab-break-point) {
+                order: 2;
+                padding: 10px 20px;
+                margin-top: 10px;
+                background-color: #efefef;
+            }
+            .action-detail {
+                @media screen and (max-width: $tab-break-point) {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    .title {
+                        font-size: 14px;
+                    }
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        &.pricing {
+            @media screen and (max-width: $tab-break-point) {
+                order: 1;
+            }
+        }
     }
 
     &-null {

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { default as classnames } from 'classnames';
 
-import './index.scss';
+import './styles.scss';
 
 const Action = ({ title, icon, color, onClick }) => {
     return (

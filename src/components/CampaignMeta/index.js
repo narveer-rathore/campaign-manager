@@ -19,11 +19,11 @@ const CampaignMeta = ({ title, subtitle, banner, type = '', image, t}) => {
             <div className="action-detail">
                 <p className={classnames({
                     "title": true,
-                    type
+                    [type]: !!type
                 })}>{title}</p>
                 <p className={classnames({
                     "subtitle": true,
-                    type
+                    [type]: !!type
                 })}>{subtitle}</p>
             </div>
         </div>

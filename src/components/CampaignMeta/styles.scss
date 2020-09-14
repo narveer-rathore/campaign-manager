@@ -31,6 +31,7 @@
         width: 137px;
         height: 137px;
         filter: drop-shadow(0px 2px 15px rgba(0, 0, 0, 0.151415));
+        flex: 0 0 137px;
       }
       &-detail {
         flex: 0 1 calc(100% - 137px);
@@ -52,6 +53,11 @@
     flex: 0 1 calc(100% - 40px);
     display: flex;
     flex-direction: column;
+    text-transform: initial;
+
+    @media screen and (max-width: $tab-break-point) {
+      flex-basis: 100%;
+    }
   }
 
   &-image {
@@ -60,6 +66,13 @@
     height: 40px;
     text-align: center;
     background-color: #eeeeee;
+    flex: 0 0 40px;
+
+    @media screen and (max-width: $tab-break-point) {
+      width: 70px;
+      height: 70px;
+      flex: 0 0 70px;
+    }
 
     img {
         height: 100%;
